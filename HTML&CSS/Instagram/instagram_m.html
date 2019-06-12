@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>인스타구램</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Noto+Sans+KR&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+             font-family: Noto Sans KR;
+            background: #f78fb3;
+                
+        }
+
+
+        #main_wrap {
+            background-color:#f1f2f6;
+            width: 600px;
+            top: 650px;
+          margin-left: 25%;
+            margin-bottom: 50%;
+            
+            position: absolute;
+            
+
+        }
+
+        /*헤더*/
+        #header {
+        
+            background-color: white;
+            
+        }
+
+        #header>#logo_a {
+            padding-left: 20px;
+            padding-top: 10px;
+            width: 145px;
+            height: 50px;
+            float: left;
+        }
+
+        #na {
+            margin-left: 1px;
+        }
+
+        #heart {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 15px;
+            margin-left: 10px;
+
+        }
+
+        #hu {
+            width: 50px;
+            height: 50px;
+            float: right;
+            margin-right: 30px;
+
+
+        }
+
+        #search {
+            border-radius: 3px;
+            border: 1px solid gray;
+            height: 19px;
+            background-color: #f1f2f6;
+            opacity: 0.5;
+            float: left;
+            margin-left: 9%;
+            margin-right: 5%;
+            margin-top: 25px;
+            text-align: center;
+        }
+        #search:hover{
+            background-color: #ffeaa7;
+            border: 2px solid #fdcb6e;
+        }
+
+
+        /*user_Info*/
+        #user_pho {
+            width: 25%;
+            height: 160px;
+            border-radius: 50%;
+          /*  margin: 50px;*/
+            margin-top: 30px;
+            margin-left: 25px;
+            margin-right:1px;
+            
+            float: left;
+        }
+
+        #user_pho2 {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px double #dcdde1;
+            margin-left: 40px;
+        }
+
+        #user_content {
+            margin-top: 40px;
+            padding: 30px;
+            margin-left: 25%;
+        }
+
+
+        #user_name {
+            float: left;
+            font-size: 23px;
+            list-style: none;
+            margin-left: 27px;
+            
+        }
+
+        #con2 {
+            margin-left: 30%;
+        }
+
+        #con2>[type=button] {
+            background-color: #f1f2f6;
+            margin-top: 10px;
+            margin-left: 25px;
+            border-radius: 3px;
+            border: 1px solid #dcdde1;
+          
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: bold;
+            color: black;
+        }
+        
+        #con2>[type=button]:nth-child(2){
+            padding-top: 2px;
+        }
+
+        #user_info>con3 {
+            clear: both;
+
+        }
+
+        #con3>li {
+            list-style: none;
+            padding-right: 25px;
+        }
+
+        #con3>li:nth-child(1) {
+            float: left;
+            margin-left: 27px;
+           
+        }
+
+        #con3>li:nth-child(2) {
+
+            float: left;
+        }
+
+        #con3>li:nth-child(5) {
+
+            font-weight: bold;
+            margin-left: 27px;
+        }
+
+        #con3>li:nth-child(6) {
+            font-size: 12px;
+            font-weight: 1px;
+            margin-left: 27px;
+        }
+
+        #con3>li:nth-child(7) {
+            font-size: 12px;
+            margin-left: 40px;
+        }
+
+        #pho2_name {
+            margin-left: 14%;
+        }
+
+        #pic_menu>li {
+            margin-left: 40%;
+            margin-bottom: 15px;
+            font-family: Black Han Sans;
+            list-style: none;
+            padding-right: 40px;
+            padding-top: 15px;
+
+        }
+
+        #pic_menu>li:nth-child(1) {
+            float: left;
+        }
+
+        #pic_list>img {
+            width: 30%;
+            height: 250px;
+            padding: 5px;
+        }
+        #hr{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main_wrap">
+
+        <!--상단메뉴-->
+        <div id="header">
+            <img id="logo_a" src="%EA%B8%80%EC%94%A8%EB%A1%9C%EA%B3%A0.png">
+            <input id="search" type="text" value="검색">
+            <img id="na" src="%EB%82%98%EC%B9%A8%EB%B0%98.PNG">
+            <img id="heart" src="%EC%9D%B8%EC%8A%A4%ED%83%80%20%ED%95%98%ED%8A%B8.png">
+            <img id="hu" src="%EC%82%AC%EB%9E%8C.png">
+        </div>
+
+        <hr id="hr">
+
+        <!--user_info-->
+        <div id="user_info">
+            <img id="user_pho" src="mata02.jpg">
+            <ul id="user_content">
+                <li id="user_name">mata_sehyoung</li>
+
+                <div id="con2">
+                    <input type="button" value="팔로잉">
+                    <input type="button" value="▼">
+                </div>
+                <br>
+                <div id="con3">
+                    <li>게시물8</li>
+                    <li>팔로워23.9천</li>
+                    <li>팔로워157</li>
+                    <br>
+                    <li>조세형</li>
+                    <li>SKT T1 귀염둥이 SUP Mata</li>
+                    <br>
+                    <li> rujehong1,untara_uijin,clid_taemin님 외 2명이 팔로우 합니다.</li>
+                </div>
+            </ul>
+            <img id="user_pho2" src="skt1.jpg">
+            <h5 id="pho2_name">t1</h5>
+            <br>
+            <hr>
+        </div>
+        
+        <!--picturs-->
+        <div id="picturs">
+            <ul id="pic_menu">
+                <li>게시물</li>
+                <li>태그됨</li>
+            </ul>
+            <div id="pic_list">
+                <img src="mata01.jpg">
+                <img src="Mata.jpg">
+                <img src="faker.jpg">
+                <img src="teddy.jpg">
+                <img src="mata02.jpg">
+                <img src="aven.jpg">
+                <img src="cutefaker.jpg">
+                <img src="mataclid.jpg">
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body></html>
