@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuety 배열처리</title>
+    
+    <style> 
+        
+        .title{
+            background-color:  aliceblue;
+            color:  violet;
+            font-size: 48px;
+            text-align: center;
+            border-radius: 25gpx;
+            height: 50px;
+        }
+    
+    </style>
+    <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+
+            var arr = [] // 배열만들기
+            arr.push({name: 'NAVER',url: 'http://www.naver.com'});
+            arr.push({name: 'DAUM',url: 'http://www.daum.net'
+            });
+            arr.push({name: 'FACEBOOK',url:'http://www.facebook.com'
+            });
+
+            var nHtml = ''; // 전역변수
+
+            // $.each(배열원본, 처리 함수)
+            $.each(arr, function(index, item) {
+                nHtml += '<a href="' +
+                    item.url +
+                    '">' +
+                    index +
+                    '. ' +
+                    item.name +
+                    '</a>';
+
+            });
+            
+             //document.body.innerHTML=nHtml;
+            
+
+            /*$('h1').css('background-color', 'yellow');*/
+
+            $('h1').each(function(index, item) {
+
+                /*alert(item.innerHTML);*/
+
+               /* $(item).html();
+                alert(v);*/
+                
+                /*$(item).html($(item).html()+'['+index+']');*/
+                
+                var insertHtml = '';
+                insertHtml += '<a href="'+arr[index].url+'">';
+                insertHtml += arr[index].name;
+                insertHtml += '</a>';
+                
+                $(item).html(insertHtml);
+                
+                if(index%2 == 0){
+                    $(item).addClass('title');
+                }
+                
+            });
+
+
+        });
+
+
+
+
+
+       
+    </script>
+</head>
+
+<body>
+
+
+    <h1>안농</h1>
+    <h1>안농</h1>
+    <h1>안농</h1>
+    <h1>안농</h1>
+    <h1>안농</h1>
+    <h1>안농</h1>
+
+</body></html>

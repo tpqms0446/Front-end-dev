@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 메서드</title>
+    <style>
+        
+        div{
+            background-color: lightpink;
+            border: 1px solid hotpink;
+            border-radius: 20px;
+            width: 20%;    
+            margin: 20px;
+            text-align: center;
+            
+        }
+        
+ 
+        
+    </style>
+    <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+    $(document).ready(function(){
+        
+        /*$('h1:even').css('background-color','black').css('color','green');
+        
+        $('h1').filter(':even').css('background-color','pink').css('color','green');
+        
+        $('h1').filter(function(i){
+           return i%2 ==1; // true -> 선택, false ->미 선택
+            
+        }).css('color', 'pink');
+        */
+        /*
+        $('h1').css('background-color','pink').filter(':even').css('color','white').end().filter(':odd').css('color','yellow');*/
+        // 1. 모든 h1 -> 핑크색 배경 적용
+        // 2. 짝수번재 탐색/선택 -> 폰트색을 흰색으로 변경
+        // 3. 짝수번째 선택을 해제 -> 모든 h1을 선택것
+        // 4. 홀수번째 요소들을 선택 -> 폰트색을 노란색으로 변경
+        
+        
+        
+        /*$('h1').css('background-color','pink').add('h2').css('color','yellow');*/
+        
+        $('input').parent().css('border','3px solid pink');
+        
+        var xml ='';
+        xml += '<friends>';
+        xml +=   '<friend>';
+        xml +=      '<name>네이버</name>';
+        xml +=      '<url>http://www.naver.com</url>';
+        xml +=  '</friend>';
+        xml +=  '<friend>';
+        xml +=      '<name>다음</name>';
+        xml +=      '<language>C#</language>';
+        xml +=  '</friend>';
+        xml +=  '<friend>';
+        xml +=      '<name>facebook</name>';
+        xml +=      '<language>JavaScript</language>';
+        xml +=     '</friend>';
+        xml += '</friends>';
+        
+        var xmlDoc = $.parseXML(xml);  // jQuery에 객체 생성한거임
+        
+        $(xmlDoc).find('friend').each(function(index){
+           
+            var name = $(this).find('name').text(); //text를 통해 받으옴 xml에서 html로 바꿈 이걸 파싱이라고 한다.
+            /*var language = $(this).find('language').text();*/
+            var url=$(this).find('url').text();
+            
+            var output ='';
+            output += '<div>';
+            output += '<h1 class="title">';
+            output += name;
+            output += '</h1>';
+            output += '<h3>';
+            output += ' ' + url;
+            output += '</h3>';
+            output += '</div>';
+            
+            document.body.innerHTML += output;
+            
+            
+        });
+        
+        
+        
+        setTimeout(function(){
+            $('h1').removeClass('title');
+            
+        }),5*1000;
+         
+        
+        
+    });
+    </script>
+</head>
+<body>
+   
+   
+<!--   <h1 class="title">h1-00</h1>
+   <h1>h1-01</h1>
+   <h1>h1-02</h1>
+   <h1>h1-03</h1>
+   <h1>h1-04</h1>
+   <h1>h1-05</h1>
+   <h1>h1-06</h1>
+   <h1>h1-07</h1>
+   <h1>h1-08</h1>
+   <h1>h1-09</h1>
+   <h1>h1-10</h1>
+   
+   <input type="text">-->
+   
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+<!--
+    <xml문서 html문서로 만들기>
+1. 문자열 -> xmldoc xml문서로 변환
+2. xml문서를 jQuery객체로 변환(xmlDoc)
+3.find() 엘리먼트(테그) 선택
+4. .each()반복처리
+5. 데이터 추출 ->  text()통해 추출한다-->
